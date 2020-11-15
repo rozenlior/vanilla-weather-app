@@ -1,9 +1,4 @@
-function formatIcon(response) {
- let iconId = response.data.weather[0].id;
- if(iconId= 800){
-   Image.querySelector(src/sun-try4.png);
- }
-}
+
 
 
 function formatDate(timestamp) {
@@ -22,6 +17,13 @@ function formatDate(timestamp) {
 }
 
 
+function formatIcon(response) {
+ let iconId = response.data.weather[0].id;
+ if(iconId= 800){
+   Image.querySelector(src/sun-try4.png);
+ }
+}
+
 function displayTemperature(response) {
   console.log(response.data);
   let temperatureElement= document.querySelector("#temperature");
@@ -39,9 +41,6 @@ function displayTemperature(response) {
   dateElement.innerHTML= formatDate(response.data.dt * 1000);
   iconElement.setAttribute("alt", response.data.weather[0].main);
   iconElement.setAttribute=formatIcon("src", response.data.weather[0].id);
-
-
-  
 }
 
 let apiKey= "958b71e38c385a4f0896342006026aa2";
